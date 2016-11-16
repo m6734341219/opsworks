@@ -11,3 +11,6 @@ cookbook 'composer', '~> 2.2.0'
 
 # mysql
 cookbook 'mysql', '= 7.2.0'
+
+# system
+cookbook 'system', '~> 0.11.2'
