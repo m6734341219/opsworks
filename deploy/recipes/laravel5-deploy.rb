@@ -58,9 +58,7 @@ node[:deploy].each do |app_name, deploy|
   end
 
   # BasicAuth
-  execute "BasicAuth" do
-    command "cp -f /home/deploy/.htaccess /srv/www/stg_shutoko_mw/current/public"
-    command "cp -f /home/deploy/.htpasswd /srv/www/stg_shutoko_mw/current/public"
-  end
+  command "\cp -f /home/deploy/.htaccess /srv/www/stg_shutoko_mw/current/public"
+  command "\cp -f /home/deploy/.htpasswd /srv/www/stg_shutoko_mw/current/public"
 
 end
