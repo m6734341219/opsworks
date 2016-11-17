@@ -57,4 +57,10 @@ node[:deploy].each do |app_name, deploy|
     to "#{deploy[:deploy_to]}/shared/log"
   end
 
+  # BasicAuth
+  execute "BasicAuth" do
+    command "cp -f /home/deploy/.htaccess /srv/www/stg_shutoko_mw/current/public"
+    command "cp -f /home/deploy/.htpasswd /srv/www/stg_shutoko_mw/current/public"
+  end
+
 end
